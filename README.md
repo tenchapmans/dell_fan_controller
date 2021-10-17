@@ -34,11 +34,11 @@ unzip 8-07-14_MegaCLI.zip
 Create debian package
 ``` bash
 cd Linux
-sudo alien MegaCli-8.07.14-1.noarch.rpm
+alien MegaCli-8.07.14-1.noarch.rpm
 ```
 Install debian package
 ``` bash
-sudo dpkg -i megacli_8.07.14-2_all.deb
+dpkg -i megacli_8.07.14-2_all.deb
 ```
 run MegaCli
 ``` bash
