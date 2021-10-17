@@ -36,7 +36,7 @@ DEBUG=1
 #
 # Time to sleep between polls in seconds.
 #
-SLEEP_TIMER=5
+SLEEP_TIMER=6
 
 #
 # Multiple value of SLEEP_TIMER to be used after increasing level
@@ -49,7 +49,7 @@ SLEEP_TIMER=5
 # SLEEP_TIMER_MULTIPLY = 6
 # 5 seconds x 6 = 30 seconds
 #
-SLEEP_TIMER_MULTIPLY=6
+SLEEP_TIMER_MULTIPLY=10
 
 #
 # Set temperature levels and fan levels here.  Fan speeds are in
