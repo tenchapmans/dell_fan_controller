@@ -1,0 +1,9 @@
+[Unit]
+Description=Dell R510/R610/R710 IPMI Fan Controller
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/local/dell_fan_controller/fan_controller.sh
+
+[Install]
+WantedBy=multi-user.target
