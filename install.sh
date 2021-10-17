@@ -1,20 +1,19 @@
-#/bin/bash
+#/bin/bash -x
 
 # install fan controller script and service on dell R710 servers
 
-localfolder="/usr/local/dell_fan_controller"
-repository="https://github.com/tenchapmans/dell_fan_controller.git"
+dir="/usr/local/dell_fan_controller"
+repo="https://github.com/tenchapmans/dell_fan_controller.git"
 
-mkdir $localfolder
+# echo "Checking if script dir exists locally and create it if needed"
+# [ ! -d "$dir" ] && mkdir -p "$dir"
 
-git clone $repository" "$localFolder
+echo "clone scripts from github"
+git clone "$repo" "$dir"
 
-systemctl enable /usr/local/dell_fan_controller/fan_controller.service
+echo "enable and start service"
+systemctl enable "$dir"/fan_controller.service
 
-systemctl start fan_controller.service
+systemctl start fan_controller
 
-
-
-# curl https://raw.githubusercontent.com/tenchapmans/dell_fan_controller/main/r710_fan_controller.sh --output /usr/local/dell_fan_controller/fan_controller.sh
-
-# curl https://github.com/tenchapmans/dell_fan_controller/blob/main/fan_controller.service --ouput /usr/local/dell_fan_controller/fan_controller.service
+systemctl status fan_controller
